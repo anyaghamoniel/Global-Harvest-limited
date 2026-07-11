@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Harvest Export Ltd - Delivering Africa's Finest Agro Commodities</title>
+<meta name="description" content="Global Harvest Export Ltd delivers premium agro commodities from Africa to the world. Cocoa, cashew, sesame, ginger, soybeans & hibiscus with full traceability and global standards.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-green: #0F5132;
+    --earth-brown: #5C4033;
+    --gold: #C9A227;
+    --light-gold: #F5E6B3;
+    --cream: #FAF8F2;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .hero-bg {
+    background-position: center;
+    background-size: cover;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .overlay {
+    background: linear-gradient(135deg, rgba(15, 81, 50, 0.88) 0%, rgba(92, 64, 51, 0.75) 100%);
+  }
+  
+  .btn-primary {
+    background: var(--gold);
+    color: var(--deep-green);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #b8911e;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(201, 162, 39, 0.3);
+  }
+  
+  .btn-secondary {
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background: white;
+    color: var(--deep-green);
+    transform: translateY(-2px);
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.9s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .product-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(15, 81, 50, 0.15);
+  }
+  
+  .product-card img {
+    transition: transform 0.6s ease;
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.08);
+  }
+  
+  .feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .feature-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  }
+  
+  .feature-icon {
+    background: linear-gradient(135deg, var(--deep-green), #1a7152);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover .feature-icon {
+    background: linear-gradient(135deg, var(--gold), #d4b342);
+    transform: rotate(5deg) scale(1.1);
+  }
+  
+  .nav-link {
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
+  }
+  
+  .parallax {
+    will-change: transform;
+  }
+</style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+<!-- Header -->
+<header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-[var(--deep-green)] to-[var(--earth-brown)] flex items-center justify-center">
+          <i class="fas fa-leaf text-[var(--gold)] text-xl"></i>
+        </div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold text-white nav-logo">Global Harvest</h1>
+          <p class="text-xs text-gray-200 nav-tag">Export Ltd</p>
+        </div>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link text-white font-medium">Home</a>
+        <a href="#about" class="nav-link text-white font-medium">About</a>
+        <a href="#products" class="nav-link text-white font-medium">Commodities</a>
+        <a href="#why-us" class="nav-link text-white font-medium">Why Us</a>
+        <a href="#contact" class="btn-primary px-6 py-2.5 rounded-lg font-semibold">Request Quote</a>
+      </nav>
+      
+      <button id="mobile-toggle" class="lg:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-72 bg-[var(--deep-green)] shadow-2xl">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-xl font-bold text-white">Menu</h2>
+        <button id="mobile-close" class="text-white text-2xl">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4">
+        <a href="#home" class="text-white py-3 border-b border-white/10">Home</a>
+        <a href="#about" class="text-white py-3 border-b border-white/10">About</a>
+        <a href="#products" class="text-white py-3 border-b border-white/10">Commodities</a>
+        <a href="#why-us" class="text-white py-3 border-b border-white/10">Why Us</a>
+        <a href="#contact" class="btn-primary text-center py-3 rounded-lg font-semibold mt-4">Request Quote</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+  <!-- Carousel Backgrounds -->
+  <div class="absolute inset-0">
+    <div class="hero-bg absolute inset-0 opacity-100" style="background-image: url('https://images.unsplash.com/photo-1558449028-14ba7695eb3b?q=80&w=2070&auto=format&fit=crop');"></div>
+    <div class="hero-bg absolute inset-0 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=2070&auto=format&fit=crop');"></div>
+    <div class="hero-bg absolute inset-0 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=2070&auto=format&fit=crop');"></div>
+    <div class="hero-bg absolute inset-0 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1514733670139-4d87f9a00aa7?q=80&w=2070&auto=format&fit=crop');"></div>
+    <div class="overlay absolute inset-0"></div>
+  </div>
+  
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[var(--gold)] font-semibold tracking-widest uppercase text-sm mb-4 fade-in-up">Trusted Export Partner Since 2008</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 fade-in-up delay-1">
+        Global Harvest Export Ltd
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto fade-in-up delay-2">
+        Delivering Africa's Finest Agro Commodities to the World with Uncompromising Quality & Traceability
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up delay-3">
+        <a href="#contact" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto">
+          Request Quote <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="#products" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto">
+          View Products
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 md:py-24 bg-[var(--cream)]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <span class="text-[var(--gold)] font-semibold uppercase tracking-wider text-sm">About Us</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--deep-green)] mt-3 mb-6">
+          Excellence in Agro Commodity Export
+        </h2>
+        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+          Global Harvest Export Ltd is a leading Nigerian agro-commodity export company dedicated to sourcing, processing, and exporting premium agricultural products from West Africa to global markets.
+        </p>
+        <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+          We maintain full traceability from farm to port, ensuring compliance with international quality standards including HACCP, ISO 22000, and FDA requirements. Our commitment to sustainable sourcing and ethical trade practices makes us the preferred partner for importers worldwide.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <i class="fas fa-check-circle text-[var(--gold)] text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[var(--deep-green)] mb-1">Quality First</h4>
+              <p class="text-gray-600 text-sm">Rigorous grading & testing</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <i class="fas fa-check-circle text-[var(--gold)] text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[var(--deep-green)] mb-1">Full Traceability</h4>
+              <p class="text-gray-600 text-sm">Farm-to-port tracking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1625246335525-b8c5b4c4d7c5?q=80&w=2070&auto=format&fit=crop" alt="African farmers harvesting" class="w-full h-[500px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--deep-green)]/40 to-transparent"></div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden md:block">
+          <div class="text-4xl font-bold text-[var(--deep-green)]">15+</div>
+          <div class="text-gray-600 font-medium">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal">
+      <span class="text-[var(--gold)] font-semibold uppercase tracking-wider text-sm">Our Commodities</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--deep-green)] mt-3 mb-4">
+        Premium Agro Products
+      </h2>
+      <p class="text-gray-600 text-lg">We export only the finest grade agricultural commodities, carefully selected and processed to meet international standards</p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product 1 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1511389026070-a14ae610a1be?q=80&w=2070&auto=format&fit=crop" alt="Cocoa Beans" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Cocoa Beans</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">Grade A</span>
+          </div>
+          <p class="text-gray-600 mb-4">Premium fermented cocoa beans from Nigeria & Ivory Coast. Moisture content ≤ 8%, bean count 90-100g.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop" alt="Cashew Nuts" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Cashew Nuts</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">W320/W240</span>
+          </div>
+          <p class="text-gray-600 mb-4">Raw cashew nuts RCN and processed kernels. Out-turn 48-52 lbs, nut count 180-220/kg.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1505475082603-55e27cac1e98?q=80&w=2074&auto=format&fit=crop" alt="Sesame Seeds" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Sesame Seeds</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">99% Pure</span>
+          </div>
+          <p class="text-gray-600 mb-4">White hulled & natural sesame seeds. Oil content 50-52%, FFA ≤ 2%, Admixture ≤ 1%.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product 4 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=2070&auto=format&fit=crop" alt="Ginger" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Ginger</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">Dried Split</span>
+          </div>
+          <p class="text-gray-600 mb-4">Sun-dried split and whole ginger. Moisture ≤ 12%, oil content 1.5-2.5%, pesticide-free.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product 5 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558449028-14ba7695eb3b?q=80&w=2070&auto=format&fit=crop" alt="Soybeans" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Soybeans</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">Non-GMO</span>
+          </div>
+          <p class="text-gray-600 mb-4">Non-GMO yellow soybeans. Protein ≥ 40%, moisture ≤ 13%, damaged ≤ 2%, foreign matter ≤ 1%.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product 6 -->
+      <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg reveal">
+        <div class="h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1514733670139-4d87f9a00aa7?q=80&w=2070&auto=format&fit=crop" alt="Dried Hibiscus" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold text-[var(--deep-green)]">Dried Hibiscus</h3>
+            <span class="bg-[var(--light-gold)] text-[var(--earth-brown)] px-3 py-1 rounded-full text-xs font-semibold">Sabdariffa</span>
+          </div>
+          <p class="text-gray-600 mb-4">Organic dried hibiscus flowers (Zobo). Moisture ≤ 10%, whole calyces, vibrant red color.</p>
+          <a href="#contact" class="text-[var(--gold)] font-semibold hover:underline">Inquire Now <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-us" class="py-16 md:py-24 bg-[var(--cream)]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal">
+      <span class="text-[var(--gold)] font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--deep-green)] mt-3 mb-4">
+        Your Trusted Export Partner
+      </h2>
+      <p class="text-gray-600 text-lg">We combine African agricultural excellence with international business standards</p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div class="feature-card bg-white p-8 rounded-xl text-center reveal">
+        <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-5">
+          <i class="fas fa-award text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[var(--deep-green)] mb-3">Quality Assurance</h3>
+        <p class="text-gray-600">ISO 22000 certified processes with third-party lab testing for every shipment</p>
+      </div>
+      
+      <div class="feature-card bg-white p-8 rounded-xl text-center reveal">
+        <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-5">
+          <i class="fas fa-ship text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[var(--deep-green)] mb-3">Global Shipping</h3>
+        <p class="text-gray-600">FOB, CIF & CFR terms available with reliable logistics partners worldwide</p>
+      </div>
+      
+      <div class="feature-card bg-white p-8 rounded-xl text-center reveal">
+        <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-5">
+          <i class="fas fa-certificate text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[var(--deep-green)] mb-3">Certifications</h3>
+        <p class="text-gray-600">NAFDAC, SON, NEPC registered with HACCP, FDA & EU compliance</p>
+      </div>
+      
+      <div class="feature-card bg-white p-8 rounded-xl text-center reveal">
+        <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-5">
+          <i class="fas fa-seedling text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[var(--deep-green)] mb-3">Sustainable Sourcing</h3>
+        <p class="text-gray-600">Direct farmer partnerships ensuring fair trade and environmental responsibility</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 md:py-20 bg-gradient-to-r from-[var(--deep-green)] to-[var(--earth-brown)] relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="parallax" data-speed="0.5" style="background-image: url('https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=2070&auto=format&fit=crop'); background-size: cover; height: 120%; margin-top: -10%;"></div>
+  </div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
+      <div class="reveal">
+        <div class="text-5xl md:text-6xl font-bold text-[var(--gold)] mb-2 counter" data-target="250000">0</div>
+        <div class="text-white text-lg font-medium">Tons Exported</div>
+        <div class="text-gray-300 text-sm mt-1">Since inception</div>
+      </div>
+      <div class="reveal">
+        <div class="text-5xl md:text-6xl font-bold text-[var(--gold)] mb-2 counter" data-target="42">0</div>
+        <div class="text-white text-lg font-medium">Countries Served</div>
+        <div class="text-gray-300 text-sm mt-1">Across 5 continents</div>
+      </div>
+      <div class="reveal">
+        <div class="text-5xl md:text-6xl font-bold text-[var(--gold)] mb-2 counter" data-target="15">0</div>
+        <div class="text-white text-lg font-medium">Years Experience</div>
+        <div class="text-gray-300 text-sm mt-1">Industry expertise</div>
+      </div>
+      <div class="reveal">
+        <div class="text-5xl md:text-6xl font-bold text-[var(--gold)] mb-2 counter" data-target="1200">0</div>
+        <div class="text-white text-lg font-medium">Farmers Network</div>
+        <div class="text-gray-300 text-sm mt-1">Direct partnerships</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 reveal">
+      <h3 class="text-2xl md:text-3xl font-bold text-[var(--deep-green)] mb-2">Certified & Compliant</h3>
+      <p class="text-gray-600">We meet stringent international standards</p>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 reveal">
+      <div class="grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="bg-gray-100 px-8 py-4 rounded-lg">
+          <span class="font-bold text-gray-700 text-lg">ISO 22000</span>
+        </div>
+      </div>
+      <div class="grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="bg-gray-100 px-8 py-4 rounded-lg">
+          <span class="font-bold text-gray-700 text-lg">NAFDAC</span>
+        </div>
+      </div>
+      <div class="grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="bg-gray-100 px-8 py-4 rounded-lg">
+          <span class="font-bold text-gray-700 text-lg">SON</span>
+        </div>
+      </div>
+      <div class="grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="bg-gray-100 px-8 py-4 rounded-lg">
+          <span class="font-bold text-gray-700 text-lg">NEPC</span>
+        </div>
+      </div>
+      <div class="grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="bg-gray-100 px-8 py-4 rounded-lg">
+          <span class="font-bold text-gray-700 text-lg">FDA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 md:py-24 bg-[var(--cream)]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <div class="reveal">
+        <span class="text-[var(--gold)] font-semibold uppercase tracking-wider text-sm">Contact Us</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--deep-green)] mt-3 mb-6">
+          Let's Discuss Your Requirements
+        </h2>
+        <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+          Ready to source premium agro commodities from Africa? Our export team responds to all inquiries within 24 hours. Get a competitive quote today.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-[var(--deep-green)] rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-[var(--gold)]"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[var(--deep-green)] mb-1">Head Office</h4>
+              <p class="text-gray-600">15 Marina Street, Apapa, Lagos, Nigeria</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-[var(--deep-green)] rounded-lg flex items-center justify-center">
+              <i class="fas fa-phone text-[var(--gold)]"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[var(--deep-green)] mb-1">Phone</h4>
+              <p class="text-gray-600">+234 803 123 4567</p>
+              <p class="text-gray-600">+234 802 987 6543</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-[var(--deep-green)] rounded-lg flex items-center justify-center">
+              <i class="fas fa-envelope text-[var(--gold)]"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[var(--deep-green)] mb-1">Email</h4>
+              <p class="text-gray-600">exports@globalharvestltd.com</p>
+              <p class="text-gray-600">info@globalharvestltd.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-[var(--deep-green)] mb-6">Request a Quote</h3>
+          <form id="contact-form" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2 text-sm">Full Name *</label>
+                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all" placeholder="John Doe">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2 text-sm">Company Name *</label>
+                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all" placeholder="Your Company Ltd">
+              </div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2 text-sm">Email Address *</label>
+                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all" placeholder="john@company.com">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2 text-sm">Phone Number *</label>
+                <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all" placeholder="+1 234 567 8900">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 font-medium mb-2 text-sm">Product Interest *</label>
+              <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all">
+                <option value="">Select a commodity</option>
+                <option>Cocoa Beans</option>
+                <option>Cashew Nuts</option>
+                <option>Sesame Seeds</option>
+                <option>Ginger</option>
+                <option>Soybeans</option>
+                <option>Dried Hibiscus</option>
+                <option>Multiple Products</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 font-medium mb-2 text-sm">Message *</label>
+              <textarea required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all resize-none" placeholder="Tell us about your requirements: quantity, destination, specifications..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-[var(--deep-green)] text-white py-4 rounded-lg font-semibold hover:bg-[#0a3d24] transition-all duration-300 shadow-lg hover:shadow-xl">
+              Send Inquiry <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[var(--earth-brown)] text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg bg-[var(--gold)] flex items-center justify-center">
+            <i class="fas fa-leaf text-[var(--deep-green)]"></i>
+          </div>
+          <span class="text-xl font-bold">Global Harvest</span>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Delivering Africa's finest agro commodities to global markets with integrity, quality, and reliability since 2008.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--gold)] transition-colors">
+            <i class="fab fa-linkedin-in text-sm"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--gold)] transition-colors">
+            <i class="fab fa-facebook-f text-sm"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--gold)] transition-colors">
+            <i class="fab fa-twitter text-sm"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#about" class="hover:text-[var(--gold)] transition-colors">About Us</a></li>
+          <li><a href="#products" class="hover:text-[var(--gold)] transition-colors">Our Commodities</a></li>
+          <li><a href="#why-us" class="hover:text-[var(--gold)] transition-colors">Why Choose Us</a></li>
+          <li><a href="#contact" class="hover:text-[var(--gold)] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-bold text-lg mb-4">Products</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#products" class="hover:text-[var(--gold)] transition-colors">Cocoa Beans</a></li>
+          <li><a href="#products" class="hover:text-[var(--gold)] transition-colors">Cashew Nuts</a></li>
+          <li><a href="#products" class="hover:text-[var(--gold)] transition-colors">Sesame Seeds</a></li>
+          <li><a href="#products" class="hover:text-[var(--gold)] transition-colors">Ginger & More</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li class="flex gap-2"><i class="fas fa-map-marker-alt text-[var(--gold)] mt-1"></i> <span>15 Marina Street, Apapa, Lagos</span></li>
+          <li class="flex gap-2"><i class="fas fa-phone text-[var(--gold)] mt-1"></i> <span>+234 803 123 4567</span></li>
+          <li class="flex gap-2"><i class="fas fa-envelope text-[var(--gold)] mt-1"></i> <span>exports@globalharvestltd.com</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+      <p>&copy; 2024 Global Harvest Export Ltd. All Rights Reserved. | RC: 1234567</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileClose = document.getElementById('mobile-close');
+  
+  mobileToggle.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+  });
+  
+  mobileClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+  });
+  
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+  
+  // Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('bg-[var(--deep-green)]', 'shadow-lg');
+      navbar.classList.remove('bg-transparent');
+    } else {
+      navbar.classList.remove('bg-[var(--deep-green)]', 'shadow-lg');
+      navbar.classList.add('bg-transparent');
+    }
+  });
+  
+  // Hero Carousel
+  const heroBgs = document.querySelectorAll('.hero-bg');
+  let currentBg = 0;
+  
+  setInterval(() => {
+    heroBgs[currentBg].style.opacity = '0';
+    currentBg = (currentBg + 1) % heroBgs.length;
+    heroBgs[currentBg].style.opacity = '1';
+  }, 5000);
+  
+  // Scroll Reveal Animation
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealOnScroll = () => {
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  };
+  
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  
+  // Animated Counters
+  const counters = document.querySelectorAll('.counter');
+  let counterStarted = false;
+  
+  const startCounters = () => {
+    if (counterStarted) return;
+    const statsSection = document.querySelector('.counter').closest('section');
+    const statsTop = statsSection.getBoundingClientRect().top;
+    
+    if (statsTop < window.innerHeight - 100) {
+      counterStarted = true;
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            counter.textContent = Math.ceil(current).toLocaleString();
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        };
+        updateCounter();
+      });
+    }
+  };
+  
+  window.addEventListener('scroll', startCounters);
+  
+  // Parallax Effect
+  const parallaxElements = document.querySelectorAll('.parallax');
+  window.addEventListener('scroll', () => {
+    parallaxElements.forEach(el => {
+      const speed = el.getAttribute('data-speed');
+      const yPos = window.scrollY * speed;
+      el.style.transform = `translateY(${yPos}px)`;
+    });
+  });
+  
+  // Form Submission
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your inquiry! Our export team will contact you within 24 hours.');
+    e.target.reset();
+  });
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const targetPosition = target.offsetTop - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+</script>
+
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;if(parent===window)return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*")},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
